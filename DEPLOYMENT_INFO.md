@@ -71,7 +71,7 @@ ssh -i ~/.ssh/verifact-key ec2-user@43.205.75.204
 ### Deployed Image
 
 ```
-kickdrishu/ai-league-codesurgeons:latest
+gagan/ai:latest
 ```
 
 **Image Registry:** Docker Hub  
@@ -81,7 +81,7 @@ kickdrishu/ai-league-codesurgeons:latest
 
 | Container | Image | Ports |
 |-----------|-------|-------|
-| **verifact-backend** | kickdrishu/ai-league-codesurgeons:latest | 8000:8000 |
+| **verifact-backend** | gagan/ai:latest | 8000:8000 |
 | **verifact-redis-stack** | redis/redis-stack-server:latest | 6379:6379 |
 
 ---
@@ -157,8 +157,8 @@ sudo docker-compose up -d
 cd /Users/apple/Developer/KD/ai-league/week-1/backend
 
 # Build and push new image
-export DOCKER_USERNAME=kickdrishu
-export IMAGE_NAME=ai-league-codesurgeons
+export DOCKER_USERNAME=gagan
+export IMAGE_NAME=ai
 ./build-and-push.sh
 
 # On EC2 instance:
@@ -314,7 +314,7 @@ terraform destroy
 
 - **Backend README:** `/Users/apple/Developer/KD/ai-league/week-1/backend/README.md`
 - **Infrastructure README:** `/Users/apple/Developer/KD/ai-league/week-1/infra/README.md`
-- **Docker Hub Repository:** https://hub.docker.com/r/kickdrishu/ai-league-codesurgeons
+- **Docker Hub Repository:** https://hub.docker.com/r/gagan/ai
 
 ---
 

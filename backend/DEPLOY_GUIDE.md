@@ -137,8 +137,8 @@ On the EC2 instance:
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| `DOCKER_USERNAME` | `kickdrishu` | Docker Hub username |
-| `IMAGE_NAME` | `ai-league-codesurgeons` | Docker image name |
+| `DOCKER_USERNAME` | `gagan` | Docker Hub username |
+| `IMAGE_NAME` | `ai` | Docker image name |
 | `VERSION` | `latest` | Image version tag |
 | `EC2_HOST` | `43.205.75.204` | EC2 instance IP address |
 | `SSH_KEY` | `~/.ssh/verifact-key` | SSH private key path |
@@ -166,8 +166,8 @@ cd /Users/apple/Developer/KD/ai-league/week-1/backend
 VERSION=v1.5.0 ./deploy.sh
 
 # This creates:
-# - kickdrishu/ai-league-codesurgeons:v1.5.0
-# - kickdrishu/ai-league-codesurgeons:latest
+# - gagan/ai:v1.5.0
+# - gagan/ai:latest
 ```
 
 ### 3. Test Build Before Deploying
@@ -200,7 +200,7 @@ EC2_HOST=prod.example.com SSH_KEY=~/.ssh/prod-key.pem ./deploy.sh
 ═══════════════════════════════════════════════════════════════════
 VeriFact Complete Deployment
 ═══════════════════════════════════════════════════════════════════
-Docker Image: kickdrishu/ai-league-codesurgeons:latest
+Docker Image: gagan/ai:latest
 EC2 Instance: ec2-user@43.205.75.204
 Backend Directory: /Users/apple/Developer/KD/ai-league/week-1/backend
 ═══════════════════════════════════════════════════════════════════
@@ -218,7 +218,7 @@ Backend Directory: /Users/apple/Developer/KD/ai-league/week-1/backend
 [4/6] Checking current backend status...
 Current containers:
 NAME                IMAGE                                    STATUS
-verifact-backend    kickdrishu/ai-league-codesurgeons:latest Up 2 hours
+verifact-backend    gagan/ai:latest Up 2 hours
 
 [5/6] Deploying to EC2 instance...
 ... (deployment output) ...
@@ -237,7 +237,7 @@ verifact-backend    kickdrishu/ai-league-codesurgeons:latest Up 2 hours
 ═══════════════════════════════════════════════════════════════════
 
 Deployment Summary:
-  • Image: kickdrishu/ai-league-codesurgeons:latest
+  • Image: gagan/ai:latest
   • Pushed to Docker Hub: Yes
   • Deployed to EC2: Yes
   • Backend URL: http://43.205.75.204:8000
@@ -367,12 +367,12 @@ ssh -i ~/.ssh/verifact-key ec2-user@43.205.75.204
 cd /app
 
 # List available images
-sudo docker images | grep ai-league-codesurgeons
+sudo docker images | grep ai
 
 # Update docker-compose.yml to use previous image
 sudo vim docker-compose.yml
-# Change: image: kickdrishu/ai-league-codesurgeons:latest
-# To:     image: kickdrishu/ai-league-codesurgeons:SHA_OR_TAG
+# Change: image: gagan/ai:latest
+# To:     image: gagan/ai:SHA_OR_TAG
 
 # Restart
 sudo docker-compose up -d backend
@@ -479,7 +479,7 @@ Zero-downtime deployment is automatic:
 
 ## 🔗 Additional Resources
 
-- **Docker Hub Repository:** https://hub.docker.com/r/kickdrishu/ai-league-codesurgeons
+- **Docker Hub Repository:** https://hub.docker.com/r/gagan/ai
 - **Backend README:** [`README.md`](README.md)
 - **Infrastructure README:** [`../infra/README.md`](../infra/README.md)
 

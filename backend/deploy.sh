@@ -21,8 +21,8 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Configuration
-DOCKER_USERNAME="${DOCKER_USERNAME:-kickdrishu}"
-IMAGE_NAME="${IMAGE_NAME:-ai-league-codesurgeons}"
+DOCKER_USERNAME="${DOCKER_USERNAME:-gagan}"
+IMAGE_NAME="${IMAGE_NAME:-ai}"
 VERSION="${VERSION:-latest}"
 EC2_HOST="${EC2_HOST:-43.205.75.204}"
 SSH_KEY="${SSH_KEY:-$HOME/.ssh/verifact-key}"

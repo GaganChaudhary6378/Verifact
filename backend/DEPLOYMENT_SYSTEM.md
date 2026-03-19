@@ -54,8 +54,8 @@ cd /Users/apple/Developer/KD/ai-league/week-1/backend
 ### Build Docker Image Only
 
 ```bash
-export DOCKER_USERNAME=kickdrishu
-export IMAGE_NAME=ai-league-codesurgeons
+export DOCKER_USERNAME=gagan
+export IMAGE_NAME=ai
 ./build-and-push.sh
 ```
 
@@ -136,8 +136,8 @@ EC2_HOST=prod-ip SSH_KEY=~/.ssh/prod-key.pem ./deploy.sh
 All configurable via environment variables:
 
 ```bash
-DOCKER_USERNAME=kickdrishu           # Your Docker Hub username
-IMAGE_NAME=ai-league-codesurgeons    # Docker image name
+DOCKER_USERNAME=gagan           # Your Docker Hub username
+IMAGE_NAME=ai    # Docker image name
 VERSION=latest                        # Image tag
 EC2_HOST=43.205.75.204               # EC2 instance IP
 SSH_KEY=~/.ssh/verifact-key          # SSH private key path
@@ -432,13 +432,13 @@ If automated deployment fails, you can deploy manually:
 
 ```bash
 # 1. Build locally
-docker build -t kickdrishu/ai-league-codesurgeons:latest .
-docker push kickdrishu/ai-league-codesurgeons:latest
+docker build -t gagan/ai:latest .
+docker push gagan/ai:latest
 
 # 2. Deploy to EC2
 ssh -i ~/.ssh/verifact-key ec2-user@43.205.75.204
 cd /app
-sudo docker pull kickdrishu/ai-league-codesurgeons:latest
+sudo docker pull gagan/ai:latest
 sudo docker-compose up -d backend
 ```
 
