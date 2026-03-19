@@ -4,7 +4,7 @@
 
 ### Step 1: Build the Extension
 ```bash
-cd /Users/applefrontend
+cd /Users/apple/frontend
 npm install
 npm run build
 ```
@@ -14,7 +14,7 @@ npm run build
 2. Go to: `chrome://extensions/`
 3. Toggle **"Developer mode"** (top-right corner) to ON
 4. Click **"Load unpacked"**
-5. Navigate to and select: `/Users/applefrontend/dist`
+5. Navigate to and select: `/Users/apple/frontend/dist`
 
 ### Step 3: Test It!
 - Click the extension icon in your Chrome toolbar
