@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Snopes",
+    "domain": "snopes.com",
+    "url": "https://www.snopes.com",
+    "credibility": 92,
+    "specialty": "general"
+  },
+  {
+    "name": "PolitiFact",
+    "domain": "politifact.com",
+    "url": "https://www.politifact.com",
+    "credibility": 90,
+    "specialty": "politics"
+  },
+  {
+    "name": "FactCheck.org",
+    "domain": "factcheck.org",
+    "url": "https://www.factcheck.org",
+    "credibility": 88,
+    "specialty": "politics"
+  },
+  {
+    "name": "Full Fact",
+    "domain": "fullfact.org",
+    "url": "https://fullfact.org",
+    "credibility": 87,
+    "specialty": "uk"
+  },
+  {
+    "name": "AP Fact Check",
+    "domain": "apnews.com",
+    "url": "https://apnews.com/ap-fact-check",
+    "credibility": 95,
+    "specialty": "general"
+  },
+  {
+    "name": "Reuters Fact Check",
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/fact-check",
+    "credibility": 95,
+    "specialty": "general"
+  }
+]
+

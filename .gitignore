@@ -1,0 +1,16 @@
+# Frontend
+week-1/frontend/node_modules/
+week-1/frontend/dist/
+week-1/frontend/.env
+week-1/frontend/.env.local
+week-1/frontend/.env.*.local
+
+# Backend
+week-1/backend/test/__pycache__/
+week-1/backend/test/venv/
+week-1/backend/test/.env
+week-1/backend/test/*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

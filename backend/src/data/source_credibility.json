@@ -1,0 +1,178 @@
+{
+  "reuters.com": {
+    "score": 95,
+    "category": "wire_service",
+    "bias": "center"
+  },
+  "apnews.com": {
+    "score": 95,
+    "category": "wire_service",
+    "bias": "center"
+  },
+  "bbc.com": {
+    "score": 90,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "cnn.com": {
+    "score": 75,
+    "category": "mainstream",
+    "bias": "left"
+  },
+  "foxnews.com": {
+    "score": 70,
+    "category": "mainstream",
+    "bias": "right"
+  },
+  "nytimes.com": {
+    "score": 85,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "washingtonpost.com": {
+    "score": 85,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "wsj.com": {
+    "score": 88,
+    "category": "mainstream",
+    "bias": "center-right"
+  },
+  "theguardian.com": {
+    "score": 82,
+    "category": "mainstream",
+    "bias": "left"
+  },
+  "usatoday.com": {
+    "score": 78,
+    "category": "mainstream",
+    "bias": "center"
+  },
+  "npr.org": {
+    "score": 87,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "pbs.org": {
+    "score": 88,
+    "category": "mainstream",
+    "bias": "center"
+  },
+  "snopes.com": {
+    "score": 92,
+    "category": "fact_checker",
+    "bias": "center"
+  },
+  "politifact.com": {
+    "score": 90,
+    "category": "fact_checker",
+    "bias": "center"
+  },
+  "factcheck.org": {
+    "score": 88,
+    "category": "fact_checker",
+    "bias": "center"
+  },
+  "fullfact.org": {
+    "score": 87,
+    "category": "fact_checker",
+    "bias": "center"
+  },
+  "nature.com": {
+    "score": 98,
+    "category": "academic",
+    "bias": "center"
+  },
+  "science.org": {
+    "score": 98,
+    "category": "academic",
+    "bias": "center"
+  },
+  "sciencedirect.com": {
+    "score": 95,
+    "category": "academic",
+    "bias": "center"
+  },
+  "nih.gov": {
+    "score": 97,
+    "category": "government",
+    "bias": "center"
+  },
+  "cdc.gov": {
+    "score": 95,
+    "category": "government",
+    "bias": "center"
+  },
+  "who.int": {
+    "score": 92,
+    "category": "government",
+    "bias": "center"
+  },
+  "gov.uk": {
+    "score": 90,
+    "category": "government",
+    "bias": "center"
+  },
+  "nasa.gov": {
+    "score": 98,
+    "category": "government",
+    "bias": "center"
+  },
+  "infowars.com": {
+    "score": 15,
+    "category": "conspiracy",
+    "bias": "far-right"
+  },
+  "breitbart.com": {
+    "score": 40,
+    "category": "blog",
+    "bias": "far-right"
+  },
+  "dailykos.com": {
+    "score": 45,
+    "category": "blog",
+    "bias": "far-left"
+  },
+  "theonion.com": {
+    "score": 5,
+    "category": "satire",
+    "bias": "center"
+  },
+  "wikipedia.org": {
+    "score": 80,
+    "category": "wiki",
+    "bias": "center"
+  },
+  "economist.com": {
+    "score": 87,
+    "category": "mainstream",
+    "bias": "center-right"
+  },
+  "theatlantic.com": {
+    "score": 83,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "time.com": {
+    "score": 80,
+    "category": "mainstream",
+    "bias": "center"
+  },
+  "newsweek.com": {
+    "score": 72,
+    "category": "mainstream",
+    "bias": "center-left"
+  },
+  "bloomberg.com": {
+    "score": 88,
+    "category": "mainstream",
+    "bias": "center"
+  },
+  "ft.com": {
+    "score": 90,
+    "category": "mainstream",
+    "bias": "center-right"
+  }
+}
+

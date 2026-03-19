@@ -1,0 +1,86 @@
+services:
+  # Redis Stack - Vector DB, Cache, and JSON storage
+  redis-stack:
+    image: redis/redis-stack-server:latest
+    container_name: verifact-redis-stack
+    ports:
+      - "6379:6379"
+      - "8001:8001"  # Redis Insight GUI
+    volumes:
+      - redis-data:/data
+    environment:
+      - REDIS_ARGS=--requirepass verifact_redis_pass
+    healthcheck:
+      test: ["CMD", "redis-cli", "--pass", "verifact_redis_pass", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - verifact-network
+    restart: unless-stopped
+
+  # VeriFact Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: verifact-backend
+    ports:
+      - "8000:8000"
+    environment:
+      # LLM Providers
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      
+      # Web Search & News APIs
+      - EXA_API_KEY=${EXA_API_KEY:-}
+      - NEWS_API_KEY=${NEWS_API_KEY:-}
+      
+      # Reranking
+      - COHERE_API_KEY=${COHERE_API_KEY:-}
+      
+      # Redis Configuration
+      - REDIS_HOST=redis-stack
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - REDIS_PASSWORD=verifact_redis_pass
+      
+      # LLM Configuration
+      - PRIMARY_LLM=${PRIMARY_LLM:-gpt-4o-mini}
+      - FALLBACK_LLM=${FALLBACK_LLM:-claude-3-5-sonnet-20241022}
+      - LLM_TEMPERATURE=0.1
+      - LLM_MAX_TOKENS=4096
+      
+      # API Server
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - API_RELOAD=false
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      
+      # CORS
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000,chrome-extension://*}
+    volumes:
+      # Mount data directory for source credibility and fact-check sources
+      # Note: Data is in src/data/ in source, but copied to data/ in container
+      # Mount is optional - if ./data exists on host, it will be used; otherwise container's data/ is used
+      - ./src/data:/app/data:ro
+    depends_on:
+      redis-stack:
+        condition: service_healthy
+    networks:
+      - verifact-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  redis-data:
+    driver: local
+
+networks:
+  verifact-network:
+    driver: bridge
+

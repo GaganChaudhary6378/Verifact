@@ -1,0 +1,33 @@
+[
+  {
+    "claim": "The Earth is flat",
+    "ground_truth": "FALSE",
+    "category": "science",
+    "difficulty": "easy"
+  },
+  {
+    "claim": "Vaccines cause autism",
+    "ground_truth": "FALSE",
+    "category": "health",
+    "difficulty": "medium"
+  },
+  {
+    "claim": "Climate change is caused by human activities",
+    "ground_truth": "TRUE",
+    "category": "science",
+    "difficulty": "medium"
+  },
+  {
+    "claim": "The COVID-19 pandemic started in 2019",
+    "ground_truth": "TRUE",
+    "category": "current_events",
+    "difficulty": "easy"
+  },
+  {
+    "claim": "5G networks cause COVID-19",
+    "ground_truth": "FALSE",
+    "category": "conspiracy",
+    "difficulty": "easy"
+  }
+]
+

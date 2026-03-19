@@ -1,0 +1,48 @@
+# FastAPI and Web Server
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+websockets==14.1
+python-multipart==0.0.12
+
+# Pydantic
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Logging
+loguru==0.7.3
+
+# Redis Stack (supports vector search, JSON, and full-text search)
+redis[hiredis]==5.2.0
+
+# LangChain & LangGraph
+langchain==0.3.7
+langchain-openai==0.2.5
+langchain-core==0.3.15
+langgraph==0.2.40
+
+# LLM Providers
+openai==1.52.0
+
+# Retry logic
+tenacity==9.0.0
+
+# RAGAS Evaluation (upgraded for langchain-core 0.3.x compatibility)
+ragas==0.2.3
+datasets==3.0.1
+
+# Reranking
+cohere==5.3.0
+
+# HTTP Client
+httpx==0.27.2
+
+# Web Search
+exa-py==1.0.9
+
+# Web Scraping
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# NLP (required by ragas for BLEU score)
+nltk==3.9.1
+

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "AI League - Verification Agent",
+  "version": "1.0.0",
+  "description": "Real-time news claim verification agent.",
+  "permissions": [
+    "sidePanel",
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "geolocation",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}

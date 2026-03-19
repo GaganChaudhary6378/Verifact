@@ -1,0 +1,78 @@
+# AWS region where resources will be deployed
+aws_region = "us-east-1"
+
+# EC2 instance type (t3.medium = 2 vCPU, 4GB RAM)
+# Adjust based on your needs:
+# - t3.small (2 vCPU, 2GB RAM) - minimal, may struggle with Redis + Backend
+# - t3.medium (2 vCPU, 4GB RAM) - recommended for dev/staging
+# - t3.large (2 vCPU, 8GB RAM) - recommended for production
+instance_type = "t3.medium"
+
+# Name of your SSH key pair in AWS
+# Create one in AWS Console -> EC2 -> Key Pairs if you don't have one
+ssh_key_name = "your-key-pair-name"
+
+# CIDR block allowed to SSH into the instance
+# IMPORTANT: Restrict this to your IP for security!
+# Find your IP: curl ifconfig.me
+# Example: "203.0.113.0/32" (single IP)
+allowed_ssh_cidr = "0.0.0.0/0"  # WARNING: This allows SSH from anywhere!
+
+# Environment name (dev, staging, prod)
+environment = "dev"
+
+# Team name for resource tagging
+team_name = "codesurgeons"
+
+# Purpose/project name for resource tagging
+purpose = "AI-League"
+
+# Project name used in resource naming (lowercase, no spaces)
+# This will be used as prefix for all AWS resources
+project_name = "verifact"
+
+# Docker image to deploy
+# Format: dockerhub_username/image_name:tag
+# Example: "johndoe/verifact-backend:latest"
+docker_image = "your-dockerhub-username/verifact-backend:latest"
+
+# ═══════════════════════════════════════════════════════════════════
+# API KEYS (REQUIRED)
+# ═══════════════════════════════════════════════════════════════════
+
+# OpenAI API Key (required for embeddings and fallback LLM)
+# Get from: https://platform.openai.com/api-keys
+openai_api_key = "sk-..."
+
+# Anthropic API Key (required for primary LLM)
+# Get from: https://console.anthropic.com/
+anthropic_api_key = "sk-ant-..."
+
+# Exa API Key (optional, for web search)
+# Get from: https://exa.ai/
+exa_api_key = ""
+
+# Brave Search API Key (optional, alternative to Exa)
+# Get from: https://brave.com/search/api/
+brave_search_api_key = ""
+
+# News API Key (optional, for news articles)
+# Get from: https://newsapi.org/
+news_api_key = ""
+
+# Cohere API Key (optional, for reranking)
+# Get from: https://dashboard.cohere.com/
+cohere_api_key = ""
+
+# ═══════════════════════════════════════════════════════════════════
+# REDIS & LLM CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+# Redis password (CHANGE THIS FOR PRODUCTION!)
+redis_password = "verifact_redis_pass_CHANGE_ME"
+
+# Primary LLM model
+primary_llm = "gpt-4o-mini"
+
+# Fallback LLM model
+fallback_llm = "claude-3-5-sonnet-20241022"

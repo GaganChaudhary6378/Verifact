@@ -1,0 +1,105 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║              VeriFact Backend - Quick Start Guide              ║
+║                                                                ║
+║         Real-Time News Claim Verification System with          ║
+║             Agentic RAG + Multi-Source Credibility             ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+📚 DOCUMENTATION FILES (Read in order):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. QUICK_REFERENCE.md   - ⚡ START HERE - 3-step setup
+2. README.md            - Full documentation & usage guide
+3. IMPLEMENTATION_SUMMARY.md - Technical implementation details
+4. CHECKLIST.md         - Complete feature & compliance checklist
+
+🚀 INSTANT START (3 Commands):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. ./setup.sh               # Auto-setup everything
+2. nano .env                # Add your API keys
+3. uvicorn src.api.main:app --reload
+
+🌐 URLs:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- API Server: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+- WebSocket: ws://localhost:8000/api/v1/ws/verify/{user_id}
+- Redis Insight: http://localhost:8001
+
+🔑 REQUIRED API KEYS (get them first):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ ANTHROPIC_API_KEY     → https://console.anthropic.com/
+✓ BRAVE_SEARCH_API_KEY  → https://brave.com/search/api/
+✓ COHERE_API_KEY        → https://dashboard.cohere.com/
+
+Optional but recommended:
+- OPENAI_API_KEY        → https://platform.openai.com/
+
+📊 PROJECT STATS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- 44 Python files (~3,900 LOC)
+- 8 major components
+- Full API contract compliance
+- WebSocket real-time streaming
+- RAGAS quality evaluation
+- Self-growing knowledge base
+
+🎯 WHAT THIS DOES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Receives claim from frontend (WebSocket)
+2. Processes claim (normalize, extract entities, classify)
+3. Retrieves evidence from multiple sources (KB + Web)
+4. Scores sources by credibility
+5. Detects stance (supports/refutes) using NLI
+6. Calculates weighted consensus
+7. Evaluates quality with RAGAS
+8. Returns verdict: TRUE | FALSE | MISLEADING | NOT ENOUGH EVIDENCE
+
+🏗️ ARCHITECTURE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Frontend → WebSocket → FastAPI → LangGraph Workflow
+                                    ↓
+            ┌───────────────────────┴───────────────────────┐
+            ↓                       ↓                       ↓
+    Redis VSS (KB)          Brave Search            Fact Checkers
+            │                       │                       │
+            └───────────────────────┴───────────────────────┘
+                                    ↓
+                        Credibility Scoring (🌟)
+                                    ↓
+                        Stance Detection (NLI)
+                                    ↓
+                        Consensus Algorithm (🌟)
+                                    ↓
+                        RAGAS Evaluation
+                                    ↓
+                        Quality Gates
+                                    ↓
+                        Final Verdict → WebSocket
+
+🔧 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Redis connection failed?
+   → cd .. && docker-compose up -d
+
+❌ Import errors?
+   → source .venv/bin/activate
+   → pip install -e ..
+
+❌ SpaCy model not found?
+   → python -m spacy download en_core_web_sm
+
+See README.md for complete troubleshooting guide.
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Read QUICK_REFERENCE.md (most common issues)
+2. Read README.md (detailed guide)
+3. Check logs in terminal
+4. Check Redis Insight: http://localhost:8001
+
+✨ READY TO START? Run: ./setup.sh
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Built with ❤️ using LangGraph, Redis Stack, and Claude 3.5 Sonnet
