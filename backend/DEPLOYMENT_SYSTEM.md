@@ -41,7 +41,7 @@ Docker image building only:
 ### Deploy Latest Code
 
 ```bash
-cd /Users/apple/Developer/KD/ai-league/week-1/backend
+cd /Users/apple/Developer//backend
 ./deploy.sh
 ```
 
@@ -381,9 +381,9 @@ jobs:
 Add to `~/.zshrc` or `~/.bashrc`:
 
 ```bash
-alias vf-deploy='cd /Users/apple/Developer/KD/ai-league/week-1/backend && ./deploy.sh'
-alias vf-deploy-dry='cd /Users/apple/Developer/KD/ai-league/week-1/backend && ./deploy.sh --dry-run'
-alias vf-build='cd /Users/apple/Developer/KD/ai-league/week-1/backend && ./build-and-push.sh'
+alias vf-deploy='cd /Users/apple/Developer//backend && ./deploy.sh'
+alias vf-deploy-dry='cd /Users/apple/Developer//backend && ./deploy.sh --dry-run'
+alias vf-build='cd /Users/apple/Developer//backend && ./build-and-push.sh'
 ```
 
 Then deploy from anywhere:

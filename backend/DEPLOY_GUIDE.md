@@ -9,7 +9,7 @@ Complete automated deployment solution for building and deploying the VeriFact b
 ### Basic Deployment
 
 ```bash
-cd /Users/apple/Developer/KD/ai-league/week-1/backend
+cd /Users/apple/Developer//backend
 ./deploy.sh
 ```
 
@@ -155,7 +155,7 @@ On the EC2 instance:
 vim src/api/main.py
 
 # Deploy
-cd /Users/apple/Developer/KD/ai-league/week-1/backend
+cd /Users/apple/Developer//backend
 ./deploy.sh
 ```
 
@@ -202,7 +202,7 @@ VeriFact Complete Deployment
 ═══════════════════════════════════════════════════════════════════
 Docker Image: gagan/ai:latest
 EC2 Instance: ec2-user@43.205.75.204
-Backend Directory: /Users/apple/Developer/KD/ai-league/week-1/backend
+Backend Directory: /Users/apple/Developer//backend
 ═══════════════════════════════════════════════════════════════════
 
 [1/6] Running pre-flight checks...
@@ -492,8 +492,8 @@ Zero-downtime deployment is automatic:
 Add to your `~/.zshrc` or `~/.bashrc`:
 
 ```bash
-alias verifact-deploy='cd /Users/apple/Developer/KD/ai-league/week-1/backend && ./deploy.sh'
-alias verifact-deploy-dry='cd /Users/apple/Developer/KD/ai-league/week-1/backend && ./deploy.sh --dry-run'
+alias verifact-deploy='cd /Users/apple/Developer//backend && ./deploy.sh'
+alias verifact-deploy-dry='cd /Users/apple/Developer//backend && ./deploy.sh --dry-run'
 ```
 
 Then deploy from anywhere:

@@ -4,7 +4,7 @@
 
 ### Step 1: Build the Extension
 ```bash
-cd /Users/apple/CodeSurgeons-AI_League/week-1/frontend
+cd /Users/applefrontend
 npm install
 npm run build
 ```
@@ -14,7 +14,7 @@ npm run build
 2. Go to: `chrome://extensions/`
 3. Toggle **"Developer mode"** (top-right corner) to ON
 4. Click **"Load unpacked"**
-5. Navigate to and select: `/Users/apple/CodeSurgeons-AI_League/week-1/frontend/dist`
+5. Navigate to and select: `/Users/applefrontend/dist`
 
 ### Step 3: Test It!
 - Click the extension icon in your Chrome toolbar

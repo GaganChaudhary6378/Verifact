@@ -154,7 +154,7 @@ sudo docker-compose up -d
 
 ```bash
 # On your local machine:
-cd /Users/apple/Developer/KD/ai-league/week-1/backend
+cd /Users/apple/Developer//backend
 
 # Build and push new image
 export DOCKER_USERNAME=gagan
@@ -231,7 +231,7 @@ curl http://43.205.75.204:8000/health
 ### View Infrastructure
 
 ```bash
-cd /Users/apple/Developer/KD/ai-league/week-1/infra
+cd /Users/apple/Developer//infra
 
 # Show current state
 terraform show
@@ -312,8 +312,8 @@ terraform destroy
 
 ## 📚 Additional Resources
 
-- **Backend README:** `/Users/apple/Developer/KD/ai-league/week-1/backend/README.md`
-- **Infrastructure README:** `/Users/apple/Developer/KD/ai-league/week-1/infra/README.md`
+- **Backend README:** `/Users/apple/Developer//backend/README.md`
+- **Infrastructure README:** `/Users/apple/Developer//infra/README.md`
 - **Docker Hub Repository:** https://hub.docker.com/r/gagan/ai
 
 ---

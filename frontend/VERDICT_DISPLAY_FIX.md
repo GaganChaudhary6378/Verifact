@@ -193,7 +193,7 @@ if (result.verdict === 'TRUE') {
 
 ```bash
 # Extension is already built at:
-cd /Users/apple/Developer/KD/ai-league/week-1/frontend/dist
+cd /Users/apple/Developer/frontend/dist
 
 # In Chrome:
 # 1. Go to chrome://extensions/

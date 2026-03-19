@@ -19,7 +19,7 @@
 1. Click **"Load unpacked"** button
 2. Navigate to and select the folder:
    ```
-   /Users/apple/Developer/KD/ai-league/week-1/frontend/dist
+   /Users/apple/Developer/frontend/dist
    ```
 3. Click **"Select"**
 
@@ -71,7 +71,7 @@ If you need to point to a different backend:
 
 1. Edit the `.env` file:
    ```bash
-   cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+   cd /Users/apple/Developer/frontend
    nano .env
    ```
 
@@ -97,7 +97,7 @@ For rapid development with auto-rebuild:
 
 ### Terminal 1: Watch Mode
 ```bash
-cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+cd /Users/apple/Developer/frontend
 npm run build:watch
 ```
 
@@ -179,7 +179,7 @@ curl http://43.205.75.204:8000/health
 **Solution:**
 ```bash
 # Verify build files exist
-ls -lh /Users/apple/Developer/KD/ai-league/week-1/frontend/dist/
+ls -lh /Users/apple/Developer/frontend/dist/
 
 # Should show:
 # - manifest.json
@@ -231,7 +231,7 @@ ls -lh /Users/apple/Developer/KD/ai-league/week-1/frontend/dist/
 
 3. **Rebuild extension:**
    ```bash
-   cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+   cd /Users/apple/Developer/frontend
    rm -rf dist node_modules
    npm install
    npm run build
@@ -277,7 +277,7 @@ Steps:
 
 Package as `.crx` file:
 ```bash
-cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+cd /Users/apple/Developer/frontend
 # Create private key
 openssl genrsa -out private-key.pem 2048
 # Package extension
@@ -296,7 +296,7 @@ If backend API changes:
 
 1. **Update types if needed:**
    ```bash
-   cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+   cd /Users/apple/Developer/frontend
    # Edit src/types.ts to match new API response format
    ```
 
@@ -312,7 +312,7 @@ If backend API changes:
 
 ```bash
 # Quick rebuild and reload
-cd /Users/apple/Developer/KD/ai-league/week-1/frontend
+cd /Users/apple/Developer/frontend
 npm run build && echo "✅ Build complete - Now reload in chrome://extensions/"
 ```
 
@@ -351,8 +351,8 @@ The extension requests:
 
 ## 📚 Additional Resources
 
-- **Backend Deployment Info:** [`/Users/apple/Developer/KD/ai-league/week-1/DEPLOYMENT_INFO.md`](/Users/apple/Developer/KD/ai-league/week-1/DEPLOYMENT_INFO.md)
-- **Frontend README:** [`/Users/apple/Developer/KD/ai-league/week-1/frontend/README.md`](/Users/apple/Developer/KD/ai-league/week-1/frontend/README.md)
+- **Backend Deployment Info:** [`/Users/apple/Developer//DEPLOYMENT_INFO.md`](/Users/apple/Developer//DEPLOYMENT_INFO.md)
+- **Frontend README:** [`/Users/apple/Developer/frontend/README.md`](/Users/apple/Developer/frontend/README.md)
 - **Backend API Docs:** http://43.205.75.204:8000/docs
 
 ---
